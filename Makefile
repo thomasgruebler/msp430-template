@@ -63,7 +63,7 @@ $(OUTDIR)/%.hex: $(OUTDIR)/%.elf
 $(OUTDIR)/$(TARGET).elf: $(OBJECTS)
 	$(CC) $(OBJECTS) $(LDFLAGS) $(LIBS) -o $@
 
-$(OUTDIR)/%.o: src/%.c | $(OUTDIR)
+$(OUTDIR)/%.o: %.c | $(OUTDIR)
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 # assembly listing
